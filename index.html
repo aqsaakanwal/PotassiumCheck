@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PotassiumCheck | CKD Nutrition Research</title>
+
+<style>
+:root {
+  --primary:#176b57;
+  --dark:#124b40;
+  --light:#eaf5f0;
+  --bg:#f5f8f7;
+  --text:#253a35;
+  --muted:#6b7d77;
+  --border:#dce8e3;
+  --white:#fff;
+  --orange:#b87525;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+header {
+  background:white;
+  padding:17px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.logo {font-size:23px;font-weight:bold;color:var(--primary)}
+nav {display:flex;gap:18px;flex-wrap:wrap}
+nav a {
+  text-decoration:none;
+  color:var(--text);
+  font-size:14px;
+  font-weight:600;
+}
+nav a:hover {color:var(--primary)}
+.container {width:90%;max-width:1200px;margin:auto}
+.hero {
+  background:linear-gradient(120deg,#e1f2e9,#f3f8f4);
+  padding:48px 5%;
+  text-align:center;
+}
+.hero h1 {font-size:34px;color:var(--dark);margin-bottom:12px}
+.hero p {max-width:780px;margin:auto;color:#536b62}
+section {padding:35px 0;scroll-margin-top:85px}
+.section-title {font-size:25px;color:var(--dark);margin-bottom:8px}
+.section-desc {color:var(--muted);margin-bottom:22px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:17px;
+}
+.card {
+  background:white;
+  padding:22px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  margin-bottom:18px;
+}
+.stat {font-size:30px;color:var(--primary);font-weight:bold}
+.stat-label {color:var(--muted);font-size:14px}
+label {display:block;font-weight:600;margin:13px 0 6px}
+input,select,textarea {
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:7px;
+  font-size:14px;
+  background:white;
+  color:var(--text);
+}
+textarea {min-height:115px;resize:vertical}
+button {
+  background:var(--primary);
+  color:white;
+  border:0;
+  border-radius:7px;
+  padding:11px 17px;
+  cursor:pointer;
+  font-weight:600;
+  margin:10px 5px 5px 0;
+}
+button:hover {background:var(--dark)}
+button.secondary {background:#647a71}
+button.danger {background:#a84343}
+button.light {background:var(--light);color:var(--dark)}
+.result-item {
+  background:#f1f8f4;
+  border-left:4px solid var(--primary);
+  padding:15px;
+  margin:12px 0;
+  border-radius:6px;
+}
+.note {
+  background:#fff7e9;
+  border-left:4px solid var(--orange);
+  padding:14px;
+  border-radius:6px;
+  margin:15px 0;
+  font-size:14px;
+}
+.status {
+  display:inline-block;
+  padding:4px 9px;
+  border-radius:20px;
+  background:var(--light);
+  color:var(--dark);
+  font-size:12px;
+  font-weight:bold;
+}
+table {width:100%;border-collapse:collapse;background:white;min-width:850px}
+th,td {
+  padding:12px;
+  border-bottom:1px solid var(--border);
+  text-align:left;
+  font-size:13px;
+}
+th {background:#edf5f1;color:var(--dark)}
+.table-wrap {overflow-x:auto;border-radius:9px}
+.bar-row {margin:13px 0}
+.bar-label {display:flex;justify-content:space-between;font-size:14px}
+.bar-bg {height:9px;background:#e4ece8;border-radius:10px;margin-top:5px}
+.bar-fill {height:9px;background:var(--primary);border-radius:10px}
+.small {font-size:12px;color:var(--muted)}
+.hidden {display:none}
+hr {border:0;border-top:1px solid var(--border);margin:20px 0}
+a {color:var(--primary)}
+footer {
+  background:#143e35;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:30px;
+}
+@media(max-width:650px) {
+  header {justify-content:center}
+  nav {justify-content:center;gap:12px}
+  .hero h1 {font-size:27px}
+  .container {width:94%}
+}
+@media print {
+  header nav,button {display:none!important}
+  body {background:white}
+  .container {width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PotassiumCheck.</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#analyzer">Analyzer</a>
+    <a href="#database">Database</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Smart Food Additive Analyzer</h1>
+  <p>
+    Screening potassium-containing food additives in processed foods
+    and organizing food composition data to support future nutrition
+    assessment research in individuals with chronic kidney disease (CKD).
+  </p>
+</div>
+
+<main class="container">
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <h2 class="section-title">Research Dashboard</h2>
+  <p class="section-desc">
+    Overview of product screening, additive detections and laboratory data.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="stat" id="totalProducts">0</div>
+      <div class="stat-label">Products Screened</div>
+    </div>
+    <div class="card">
+      <div class="stat" id="flaggedProducts">0</div>
+      <div class="stat-label">Products with Flagged Additives</div>
+    </div>
+    <div class="card">
+      <div class="stat" id="totalDetections">0</div>
+      <div class="stat-label">Total Additive Detections</div>
+    </div>
+    <div class="card">
+      <div class="stat" id="uniqueAdditives">0</div>
+      <div class="stat-label">Unique Additives Detected</div>
+    </div>
+    <div class="card">
+      <div class="stat" id="labProducts">0</div>
+      <div class="stat-label">Products with Lab Measurements</div>
+    </div>
+    <div class="card">
+      <div class="stat" id="referenceCount">0</div>
+      <div class="stat-label">Products with References</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Additive Detection Frequency</h3>
+    <div id="frequencyChart"></div>
+  </div>
+
+  <button onclick="exportAll()">Download Research Dataset (CSV)</button>
+  <button class="secondary" onclick="window.print()">Print Dashboard / Save PDF</button>
+</section>
+
+<hr>
+
+<!-- ANALYZER -->
+<section id="analyzer">
+  <h2 class="section-title">Food Ingredient Analyzer</h2>
+  <p class="section-desc">
+    Enter product information and its ingredient list for preliminary screening.
+  </p>
+
+  <div class="card">
+    <h3>Product Information</h3>
+
+    <label>Food Product Name *</label>
+    <input id="productName" placeholder="Example: Packaged Tomato Sauce">
+
+    <label>Brand Name</label>
+    <input id="brandName" placeholder="Enter brand name">
+
+    <label>Food Category</label>
+    <select id="category">
+      <option value="Sauces and Condiments">Sauces and Condiments</option>
+      <option value="Beverages">Beverages</option>
+      <option value="Dairy Products">Dairy Products</option>
+      <option value="Bakery Products">Bakery Products</option>
+      <option value="Processed Meat">Processed Meat</option>
+      <option value="Snacks">Snacks</option>
+      <option value="Canned Foods">Canned Foods</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label>Serving Size (g)</label>
+    <input type="number" id="servingSize" min="0" step="any"
+      placeholder="Example: 30">
+
+    <label>Ingredient List *</label>
+    <textarea id="ingredients"
+      placeholder="Enter the complete ingredient list exactly as printed on the package..."></textarea>
+
+    <button onclick="analyze()">Analyze Ingredients</button>
+    <button class="secondary" onclick="clearAnalyzer()">Clear</button>
+  </div>
+
+  <div class="card hidden" id="analysisResults">
+    <h3>Analysis Results</h3>
+    <div id="analysisContent"></div>
+
+    <hr>
+
+    <h3>Laboratory Potassium Data</h3>
+    <p class="small">
+      Enter values only when supported by actual laboratory analysis.
+      Do not enter estimated or invented measurements.
+    </p>
+
+    <label>Measurement Status</label>
+    <select id="measurementStatus" onchange="toggleLabFields()">
+      <option value="Not measured">Not measured</option>
+      <option value="Pending">Pending laboratory analysis</option>
+      <option value="Laboratory measured">Laboratory measured</option>
+    </select>
+
+    <div id="labFields" class="hidden">
+      <label>Potassium Concentration (mg/100g) *</label>
+      <input type="number" id="potassium100" min="0" step="any"
+        placeholder="Enter measured value">
+
+      <label>Potassium per Serving (mg)</label>
+      <input type="number" id="potassiumServing" min="0" step="any"
+        placeholder="Enter measured value">
+
+      <label>Analytical Method *</label>
+      <select id="method">
+        <option value="">Select method</option>
+        <option value="Flame Photometry">Flame Photometry</option>
+        <option value="ICP-OES">ICP-OES</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Laboratory / Analysis Notes</label>
+      <textarea id="labNotes"
+        placeholder="Sample preparation, laboratory details, replicates, etc."></textarea>
+    </div>
+
+    <hr>
+
+    <h3>Scientific Reference</h3>
+
+    <label>Reference Title / Source</label>
+    <input id="referenceTitle"
+      placeholder="Enter article, database or official source title">
+
+    <label>Reference URL</label>
+    <input id="referenceUrl" placeholder="https://...">
+
+    <label>Additional Research Notes</label>
+    <textarea id="researchNotes"
+      placeholder="Enter relevant observations or research notes..."></textarea>
+
+    <div class="note">
+      <strong>Research limitation:</strong>
+      Ingredient-label screening identifies selected additives only.
+      It does not establish their quantity, total potassium concentration,
+      dietary intake, bioavailability or clinical risk.
+    </div>
+
+    <button onclick="saveProduct()">Save to Research Database</button>
+    <button class="secondary" onclick="downloadCurrent()">Download This Analysis (CSV)</button>
+    <button class="light" onclick="window.print()">Print / Save PDF</button>
+  </div>
+</section>
+
+<hr>
+
+<!-- DATABASE -->
+<section id="database">
+  <h2 class="section-title">Research Product Database</h2>
+  <p class="section-desc">
+    Saved product screenings, laboratory measurements and references.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Product</th>
+          <th>Brand</th>
+          <th>Category</th>
+          <th>Additives</th>
+          <th>Potassium mg/100g</th>
+          <th>Measurement</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="databaseBody">
+        <tr><td colspan="8">No saved products yet.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button onclick="exportAll()">Export All Research Records</button>
+</section>
+
+<hr>
+
+<!-- METHODOLOGY -->
+<section id="methodology">
+  <h2 class="section-title">Research Methodology</h2>
+
+  <div class="card">
+    <h3>1. Research Objective</h3>
+    <p>
+      To develop an educational digital prototype for screening selected
+      potassium-containing additives in processed food ingredient labels
+      and organizing product-level information for future CKD nutrition
+      assessment research.
+    </p>
+
+    <hr>
+    <h3>2. Research Design</h3>
+    <p>
+      A descriptive ingredient-label screening approach is used.
+      Product labels are reviewed for selected additive names and
+      associated E-numbers.
+    </p>
+
+    <hr>
+    <h3>3. Data Collection</h3>
+    <p>
+      Product name, brand, category, serving size and ingredient-list
+      information are recorded from packaged food labels.
+      Laboratory measurements and references can be added separately.
+    </p>
+
+    <hr>
+    <h3>4. Screening Procedure</h3>
+    <ol>
+      <li>Select a packaged food product.</li>
+      <li>Record its ingredient list as printed on the package.</li>
+      <li>Enter the information into PotassiumCheck.</li>
+      <li>Compare ingredient names and selected E-numbers against the prototype database.</li>
+      <li>Save identified additives and product information.</li>
+      <li>Record laboratory measurements only when actual data are available.</li>
+      <li>Export records for further research analysis.</li>
+    </ol>
+
+    <hr>
+    <h3>5. Data Analysis</h3>
+    <p>
+      Product counts, additive frequencies and laboratory measurements
+      can be summarized separately. Laboratory values must be interpreted
+      according to the analytical method and sample basis.
+    </p>
+
+    <hr>
+    <h3>6. Future Experimental Validation</h3>
+    <p>
+      Selected products could undergo laboratory potassium quantification
+      using an appropriate validated analytical method, such as flame
+      photometry or ICP-OES, depending on available facilities,
+      sample preparation and method validation.
+    </p>
+
+    <hr>
+    <h3>7. Research Limitations</h3>
+    <ul>
+      <li>Ingredient labels generally do not state the quantity of each additive.</li>
+      <li>Ingredient order is not a quantitative measurement.</li>
+      <li>The prototype database covers selected additives, not every possible potassium source.</li>
+      <li>Spelling and label transcription can affect detection.</li>
+      <li>Laboratory measurements are not automatically available.</li>
+      <li>The prototype does not estimate individual potassium intake or clinical risk.</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About PotassiumCheck</h2>
+
+  <div class="card">
+    <p>
+      PotassiumCheck is an educational research prototype connecting
+      food ingredient information, food composition research and
+      nutrition assessment in individuals with chronic kidney disease.
+    </p>
+
+    <br>
+    <h3>Food Composition</h3>
+    <p>Identifies selected potassium-containing additives in ingredient labels.</p>
+
+    <br>
+    <h3>Laboratory Research</h3>
+    <p>Provides fields for recording measured potassium concentrations and analytical methods.</p>
+
+    <br>
+    <h3>Scientific Documentation</h3>
+    <p>Allows researchers to organize references, laboratory notes and product-level data.</p>
+
+    <div class="note">
+      PotassiumCheck is not a validated clinical instrument and does not
+      provide individualized dietary advice. Clinical decisions for CKD
+      should be made with qualified healthcare professionals.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Scientific Resources for Verification</h3>
+    <p class="small">
+      Verify additive identities, codes, functions and regulatory status
+      against authoritative references before research use.
+    </p>
+    <p>
+      <a href="https://www.fao.org/gsfaonline/" target="_blank" rel="noopener">
+        FAO/WHO Codex GSFA Online
+      </a>
+    </p>
+    <p>
+      <a href="https://www.fda.gov/food/food-additives-petitions/food-additive-status-list"
+         target="_blank" rel="noopener">
+        US FDA Food Additive Status List
+      </a>
+    </p>
+    <p>
+      <a href="https://www.hfpappexternal.fda.gov/scripts/fdcc/index.cfm?cat=FoodIngredientsPackaging"
+         target="_blank" rel="noopener">
+        FDA Search Food Ingredient and Packaging Inventories
+      </a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>PotassiumCheck | Food Science & Nutrition Research</strong>
+  <p>Academic Research Prototype | 2026</p>
+</footer>
+
+<script>
+
+// Selected additive reference database.
+// Verify identities, codes and functions before formal research use.
+
+const additiveDatabase = [
+  {
+    name:"Potassium Chloride",
+    codes:["E508"],
+    aliases:["potassium chloride"],
+    function:"Salt substitute / flavor enhancer",
+    relevance:"Can contribute potassium to the diet. Its presence may be relevant when assessing dietary potassium sources."
+  },
+  {
+    name:"Potassium Sorbate",
+    codes:["E202"],
+    aliases:["potassium sorbate"],
+    function:"Food preservative",
+    relevance:"Contains potassium, but the ingredient label does not reveal the quantity contributed."
+  },
+  {
+    name:"Potassium Phosphate",
+    codes:["E340","E340(i)","E340(ii)","E340(iii)"],
+    aliases:[
+      "potassium phosphate",
+      "monopotassium phosphate",
+      "dipotassium phosphate",
+      "tripotassium phosphate"
+    ],
+    function:"Emulsifier / acidity regulator / stabilizer",
+    relevance:"A potassium-containing additive that can be flagged for further investigation."
+  },
+  {
+    name:"Potassium Citrate",
+    codes:["E332","E332(i)","E332(ii)"],
+    aliases:[
+      "potassium citrate",
+      "monopotassium citrate",
+      "dipotassium citrate"
+    ],
+    function:"Acidity regulator / buffering agent",
+    relevance:"A potassium-containing additive relevant to preliminary ingredient-label screening."
+  },
+  {
+    name:"Potassium Lactate",
+    codes:["E326"],
+    aliases:["potassium lactate"],
+    function:"Acidity regulator / preservative",
+    relevance:"A potassium-containing additive that may be relevant to dietary potassium assessment."
+  },
+  {
+    name:"Potassium Acetate",
+    codes:["E261"],
+    aliases:["potassium acetate"],
+    function:"Acidity regulator",
+    relevance:"Contains potassium and can be included in ingredient-label screening."
+  },
+  {
+    name:"Potassium Alginate",
+    codes:["E402"],
+    aliases:["potassium alginate"],
+    function:"Thickener / stabilizer",
+    relevance:"A potassium-containing food additive."
+  },
+  {
+    name:"Potassium Carbonate",
+    codes:["E501(i)"],
+    aliases:["potassium carbonate"],
+    function:"Acidity regulator / raising agent",
+    relevance:"A potassium-containing additive."
+  },
+  {
+    name:"Potassium Bicarbonate",
+    codes:["E501(ii)"],
+    aliases:[
+      "potassium bicarbonate",
+      "potassium hydrogen carbonate"
+    ],
+    function:"Raising agent / acidity regulator",
+    relevance:"A potassium-containing additive."
+  }
+];
+
+const STORAGE_KEY = "potassiumResearchData";
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
+}
+
+// Try to preserve records from older versions of PotassiumCheck.
+// It checks other local-storage keys containing "potassium".
+
+function migrateOldRecords() {
+  let current = [];
+
+  try {
+    current = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    if (!Array.isArray(current)) current = [];
+  } catch {
+    current = [];
+  }
+
+  const migrated = [...current];
+  const existingSignatures = new Set(
+    migrated.map(p => [
+      p.name || p.productName || "",
+      p.ingredients || "",
+      p.date || ""
+    ].join("|"))
+  );
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+
+    if (!key || key === STORAGE_KEY ||
+        !key.toLowerCase().includes("potassium")) {
+      continue;
+    }
+
+    try {
+      const parsed = JSON.parse(localStorage.getItem(key));
+      let records = Array.isArray(parsed) ? parsed : [];
+
+      if (!Array.isArray(parsed) && parsed && typeof parsed === "object") {
+        if (Array.isArray(parsed.products)) records = parsed.products;
+        else if (Array.isArray(parsed.records)) records = parsed.records;
+      }
+
+      records.forEach(old => {
+        if (!old || typeof old !== "object") return;
+
+        const name = old.name || old.productName || old.product || "";
+        if (!name) return;
+
+        const ingredients = old.ingredients || old.ingredientList || "";
+        const date = old.date || old.createdAt || "";
+        const signature = [name,ingredients,date].join("|");
+
+        if (existingSignatures.has(signature)) return;
+
+        const oldDetections = Array.isArray(old.detections)
+          ? old.detections
+          : Array.isArray(old.additives)
+            ? old.additives
+            : [];
+
+        const normalizedDetections = oldDetections.map(d => {
+          if (typeof d === "string") {
+            return additiveDatabase.find(a =>
+              a.name.toLowerCase() === d.toLowerCase()
+            ) || {
+              name:d,
+              codes:[],
+              function:"Not verified",
+              relevance:"Requires reference verification."
+            };
+          }
+          return d;
+        });
+
+        migrated.push({
+          ...old,
+          name,
+          brand:old.brand || old.brandName || "",
+          category:old.category || "Other",
+          ingredients,
+          date:date || new Date().toLocaleDateString(),
+          detections:normalizedDetections,
+          status:old.status || "Not measured",
+          potassium100:old.potassium100 || "",
+          potassiumServing:old.potassiumServing || "",
+          method:old.method || "",
+          referenceTitle:old.referenceTitle || "",
+          referenceUrl:old.referenceUrl || ""
+        });
+
+        existingSignatures.add(signature);
+      });
+    } catch (error) {
+      // Ignore unrelated or unreadable browser storage entries.
+    }
+  }
+
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated));
+  } catch (error) {
+    alert("Browser storage could not be updated. Export or back up your records.");
+  }
+
+  return migrated;
+}
+
+let products = migrateOldRecords();
+let currentAnalysis = null;
+
+function getDetections(text) {
+  const lower = text.toLowerCase();
+
+  return additiveDatabase.filter(item => {
+    return [...item.aliases,...item.codes].some(term =>
+      lower.includes(term.toLowerCase())
+    );
+  });
+}
+
+function analyze() {
+  const name = document.getElementById("productName").value.trim();
+  const ingredients = document.getElementById("ingredients").value.trim();
+
+  if (!name || !ingredients) {
+    alert("Please enter the product name and ingredient list.");
+    return;
+  }
+
+  const detections = getDetections(ingredients);
+
+  currentAnalysis = {
+    name,
+    brand:document.getElementById("brandName").value.trim(),
+    category:document.getElementById("category").value,
+    ingredients,
+    servingSize:document.getElementById("servingSize").value,
+    detections
+  };
+
+  let html = `
+    <p><strong>Product:</strong> ${escapeHTML(name)}</p>
+    <p><strong>Brand:</strong> ${escapeHTML(currentAnalysis.brand || "Not provided")}</p>
+    <p><strong>Category:</strong> ${escapeHTML(currentAnalysis.category)}</p>
+    <p><strong>Ingredient matches:</strong> ${detections.length}</p>
+  `;
+
+  if (detections.length === 0) {
+    html += `
+      <div class="note">
+        No selected additives detected. This does not establish
+        that the food is low in potassium.
+      </div>`;
+  }
+
+  detections.forEach(item => {
+    html += `
+      <div class="result-item">
+        <h3>${escapeHTML(item.name)}</h3>
+        <p><strong>Additive code:</strong> ${escapeHTML(item.codes.join(", "))}</p>
+        <p><strong>Food function:</strong> ${escapeHTML(item.function)}</p>
+        <p><strong>CKD research relevance:</strong> ${escapeHTML(item.relevance)}</p>
+        <span class="status">Ingredient match</span>
+      </div>`;
+  });
+
+  html += `
+    <div class="note">
+      This is preliminary label screening, not a measurement of
+      potassium concentration, dietary intake or clinical risk.
+    </div>`;
+
+  document.getElementById("analysisContent").innerHTML = html;
+  document.getElementById("analysisResults").classList.remove("hidden");
+
+  document.getElementById("measurementStatus").value = "Not measured";
+  toggleLabFields();
+}
+
+function toggleLabFields() {
+  const status = document.getElementById("measurementStatus").value;
+
+  document.getElementById("labFields").classList.toggle(
+    "hidden",
+    status !== "Laboratory measured"
+  );
+}
+
+function saveProduct() {
+  if (!currentAnalysis) {
+    alert("Analyze a product first.");
+    return;
+  }
+
+  const status = document.getElementById("measurementStatus").value;
+  const potassium100 = document.getElementById("potassium100").value;
+  const potassiumServing = document.getElementById("potassiumServing").value;
+  const method = document.getElementById("method").value;
+
+  if (status === "Laboratory measured" &&
+      (potassium100 === "" || !method)) {
+    alert("Enter the measured mg/100g value and select an analytical method.");
+    return;
+  }
+
+  const record = {
+    ...currentAnalysis,
+    date:new Date().toLocaleDateString(),
+    status,
+    potassium100:status === "Laboratory measured" ? potassium100 : "",
+    potassiumServing:status === "Laboratory measured" ? potassiumServing : "",
+    method:status === "Laboratory measured" ? method : "",
+    labNotes:document.getElementById("labNotes").value,
+    referenceTitle:document.getElementById("referenceTitle").value.trim(),
+    referenceUrl:document.getElementById("referenceUrl").value.trim(),
+    researchNotes:document.getElementById("researchNotes").value.trim()
+  };
+
+  products.push(record);
+
+  try {
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(products));
+  } catch (error) {
+    alert("Unable to save. Please export your records and check browser storage.");
+    return;
+  }
+
+  renderAll();
+  alert("Product successfully saved to your research database.");
+}
+
+function renderAll() {
+  const total = products.length;
+  const flagged = products.filter(p =>
+    Array.isArray(p.detections) && p.detections.length > 0
+  ).length;
+
+  const detections = products.reduce((sum,p) =>
+    sum + (Array.isArray(p.detections) ? p.detections.length : 0),0
+  );
+
+  const unique = new Set(
+    products.flatMap(p =>
+      Array.isArray(p.detections) ? p.detections.map(d => d.name) : []
+    )
+  );
+
+  const measured = products.filter(p =>
+    p.status === "Laboratory measured"
+  ).length;
+
+  const referenced = products.filter(p =>
+    p.referenceTitle || p.referenceUrl
+  ).length;
+
+  document.getElementById("totalProducts").textContent = total;
+  document.getElementById("flaggedProducts").textContent = flagged;
+  document.getElementById("totalDetections").textContent = detections;
+  document.getElementById("uniqueAdditives").textContent = unique.size;
+  document.getElementById("labProducts").textContent = measured;
+  document.getElementById("referenceCount").textContent = referenced;
+
+  const frequency = {};
+
+  products.forEach(p => {
+    (p.detections || []).forEach(d => {
+      frequency[d.name] = (frequency[d.name] || 0) + 1;
+    });
+  });
+
+  const max = Math.max(1,...Object.values(frequency));
+
+  document.getElementById("frequencyChart").innerHTML =
+    Object.entries(frequency).length
+      ? Object.entries(frequency).map(([name,count]) => `
+        <div class="bar-row">
+          <div class="bar-label">
+            <span>${escapeHTML(name)}</span>
+            <strong>${count}</strong>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" style="width:${count/max*100}%"></div>
+          </div>
+        </div>
+      `).join("")
+      : "<p class='small'>No additive data available yet.</p>";
+
+  const body = document.getElementById("databaseBody");
+
+  if (!products.length) {
+    body.innerHTML = `<tr><td colspan="8">No saved products yet.</td></tr>`;
+    return;
+  }
+
+  body.innerHTML = products.map((p,i) => `
+    <tr>
+      <td>${escapeHTML(p.date)}</td>
+      <td>${escapeHTML(p.name)}</td>
+      <td>${escapeHTML(p.brand || "—")}</td>
+      <td>${escapeHTML(p.category)}</td>
+      <td>${(p.detections || []).map(d => escapeHTML(d.name)).join(", ") || "None"}</td>
+      <td>${p.potassium100 !== "" ? escapeHTML(p.potassium100) : "Not measured"}</td>
+      <td>${escapeHTML(p.status || "Not measured")}</td>
+      <td><button class="danger" onclick="deleteProduct(${i})">Delete</button></td>
+    </tr>
+  `).join("");
+}
+
+function deleteProduct(index) {
+  if (!confirm("Delete this product record?")) return;
+
+  products.splice(index,1);
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(products));
+  renderAll();
+}
+
+function csvEscape(value) {
+  return '"' + String(value ?? "").replace(/"/g,'""') + '"';
+}
+
+function downloadCSV(rows,filename) {
+  const csv = rows.map(row =>
+    row.map(csvEscape).join(",")
+  ).join("\n");
+
+  const blob = new Blob(["\uFEFF" + csv], {
+    type:"text/csv;charset=utf-8;"
+  });
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function recordToRow(p) {
+  return [
+    p.date,p.name,p.brand,p.category,p.servingSize,p.ingredients,
+    (p.detections || []).map(d => d.name).join("; "),
+    (p.detections || []).map(d => (d.codes || []).join("/")).join("; "),
+    p.status,p.potassium100,p.potassiumServing,p.method,
+    p.labNotes,p.referenceTitle,p.referenceUrl,p.researchNotes
+  ];
+}
+
+const csvHeaders = [
+  "Date","Product","Brand","Category","Serving Size (g)",
+  "Ingredients","Detected Additives","Additive Codes",
+  "Measurement Status","Potassium (mg/100g)",
+  "Potassium (mg/serving)","Analytical Method",
+  "Laboratory Notes","Reference Title","Reference URL","Research Notes"
+];
+
+function exportAll() {
+  downloadCSV(
+    [csvHeaders,...products.map(recordToRow)],
+    "PotassiumCheck_Research_Dataset.csv"
+  );
+}
+
+function downloadCurrent() {
+  if (!currentAnalysis) {
+    alert("Analyze a product first.");
+    return;
+  }
+
+  const row = {
+    ...currentAnalysis,
+    date:new Date().toLocaleDateString(),
+    status:document.getElementById("measurementStatus").value,
+    potassium100:document.getElementById("potassium100").value,
+    potassiumServing:document.getElementById("potassiumServing").value,
+    method:document.getElementById("method").value,
+    labNotes:document.getElementById("labNotes").value,
+    referenceTitle:document.getElementById("referenceTitle").value,
+    referenceUrl:document.getElementById("referenceUrl").value,
+    researchNotes:document.getElementById("researchNotes").value
+  };
+
+  downloadCSV(
+    [csvHeaders,recordToRow(row)],
+    "PotassiumCheck_Product_Analysis.csv"
+  );
+}
+
+function clearAnalyzer() {
+  [
+    "productName","brandName","servingSize","ingredients",
+    "potassium100","potassiumServing","labNotes",
+    "referenceTitle","referenceUrl","researchNotes"
+  ].forEach(id => {
+    document.getElementById(id).value = "";
+  });
+
+  document.getElementById("category").selectedIndex = 0;
+  document.getElementById("measurementStatus").value = "Not measured";
+  document.getElementById("method").value = "";
+  document.getElementById("analysisResults").classList.add("hidden");
+  document.getElementById("labFields").classList.add("hidden");
+
+  currentAnalysis = null;
+}
+
+// Load saved records and render dashboard.
+renderAll();
+
+</script>
+
+</body>
+</html>
