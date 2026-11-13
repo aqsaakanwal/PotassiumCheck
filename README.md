@@ -1,7 +1,7 @@
 # PotassiumCheck
 ### A Digital Prototype for Screening Potassium-Containing Food Additives
 
-🌐 **Live Website:** https://aqsaakanwal.github.io/PotassiumCheck/
+🌐 **Live Website:** [https://aqsaakanwal.github.io/PotassiumCheck/](https://aqsaakanwal.github.io/PotassiumCheck/)
 
 ## About the Project
 
